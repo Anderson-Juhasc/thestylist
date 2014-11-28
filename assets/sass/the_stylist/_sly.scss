@@ -1,0 +1,131 @@
+.sly {
+    margin-bottom:24px;
+    padding:0 26px;
+    position:relative;
+    text-align:center;
+
+    .sprite {
+        display:none;
+    }
+
+    .prevPage {
+        display:block;
+        position:absolute;
+        line-height:100px;
+        top:0;
+        left:0;
+        width:26px;
+
+        .sprite--left {
+            display:inline-block;
+        }
+    }
+
+    .nextPage {
+        display:block;
+        position:absolute;
+        line-height:100px;
+        top:0;
+        right:0;
+        width:24px;
+
+        .sprite--right {
+            display:inline-block;
+        }
+    }
+
+    img {
+        width:100%;
+        max-width:100%;
+    }
+
+    @include media-query(desk) {
+        padding:26px 0;
+
+        .prevPage {
+            line-height:26px;
+            top:0;
+            left:0;
+            width:100%;
+
+            .sprite--left {
+                display:none;
+            }
+
+            .sprite--up {
+                display:inline-block;
+            }
+        }
+
+        .nextPage {
+            line-height:26px;
+            top:auto;
+            bottom:0;
+            left:0;
+            width:100%;
+
+            .sprite--right {
+                display:none;
+            }
+
+            .sprite--down {
+                display:inline-block;
+            }
+        }
+    }
+}
+
+.sly-desk {
+    display:none;
+    height:408px;
+
+    .sly-items {
+    }
+
+    @include media-query(desk) {
+        display:block;
+    }
+}
+
+.sly-palm {
+    list-style:none;
+    margin:0;
+
+    @include media-query(desk) {
+        display:none;
+    }
+}
+
+.sly-items {
+    @include cf;
+
+    list-style:none;
+    margin:0;
+    padding-right:2px;
+
+    > li {
+        float:left;
+        margin-right:12px;
+        width:100px;
+
+        > a {
+            display:block;
+
+            > img {
+                display:block;
+            }
+        }
+    }
+
+    @include media-query(desk) {
+        padding-right:0;
+        padding-bottom:2px;
+
+        > li {
+            height:112px;
+            margin-right:0;
+            margin-bottom:12px;
+            width:auto;
+        }
+    }
+}

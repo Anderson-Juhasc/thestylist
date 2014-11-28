@@ -1,0 +1,38 @@
+.stylist {
+    margin-bottom:48px;
+}
+
+.stylist-main__nav {
+    @include cf;
+
+    font-size:13px;
+    list-style:none;
+    line-height:1;
+    margin-left:0;
+    text-transform:uppercase;
+
+    > li {
+        border-right:1px solid #6d6d6d;
+        float:left;
+        padding:0 6px;
+
+        &:first-child {
+            padding-left:0;
+        }
+
+        &:last-child {
+            border-right:none;
+            padding-right:0;
+        }
+    }
+}
+
+.stylist-aside__link {
+    display:block;
+    text-align:center;
+
+    > img {
+        display:inline-block;
+        max-width:100%;
+    }
+}

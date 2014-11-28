@@ -1,0 +1,25 @@
+body {
+    font-size:14px;
+}
+
+.body--blog {
+    background-color:#f2f2f2;
+
+    .midia {
+        display:none;
+    }
+
+    .about {
+        background-color:#FFF;
+        margin-bottom:0;
+        padding:48px 0;
+    }
+}
+
+a {
+    text-decoration:none;
+
+    &:hover {
+        text-decoration:underline;
+    }
+}

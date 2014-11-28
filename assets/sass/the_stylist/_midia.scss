@@ -1,0 +1,30 @@
+.midia {
+    background:#fafafa;
+    padding:24px 0;
+}
+
+.midia__list {
+    margin:0;
+
+    > li {
+        display:inline-block;
+        vertical-align:middle;
+        padding:0 24px;
+
+        &:first-child {
+            padding-left:0;
+        }
+
+        &:last-child {
+            padding-right:0;
+        }
+    }
+}
+
+.midia__item {
+    display:block;
+
+    > img {
+        display:inline-block;
+    }
+}

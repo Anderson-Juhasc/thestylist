@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+  Anderson Juhasc -- Front-End Developer -- @Anderson_Juhasc
+
+  <name> -- <role> -- <twitter>
+
+# THANKS
+
+  <name>
+
+# TECHNOLOGY COLOPHON
+
+  HTML5, CSS3

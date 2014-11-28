@@ -1,0 +1,150 @@
+.blog {
+    color:#444;
+    margin-bottom:($half-spacing * 3);
+
+    .sprite {
+        vertical-align:baseline;
+    }
+}
+
+.blog__main {
+    margin-bottom:36px;
+
+    @include media-query(desk) {
+        margin-bottom:0;
+    }
+}
+
+.blog-item {
+    background-color:#FFF;
+    border-width:0 1px;
+    border-style:solid;
+    border-color:#dadada;
+    margin-bottom:24px;
+    padding:24px;
+
+    a {
+        color:#6b6b6b;
+    }
+
+    &:last-child {
+        margin-bottom:0;
+    }
+}
+
+.blog-item__head {
+    margin-bottom:36px;
+}
+
+.blog-item__head-nav {
+    font-size:13px;
+    list-style:none;
+    margin:0;
+
+    > li {
+        display:inline-block;
+        padding-right:12px;
+    }
+}
+
+.blog-item__title {
+    font-family:$roboto;
+    font-weight:700;
+    line-height:1.3;
+    text-transform:none;
+
+    > a {
+        color:#363636;
+    }
+}
+
+.blog-item__body {
+    img {
+        max-width:100%;
+    }
+
+    .img--center {
+        display:block;
+        margin-right:auto;
+        margin-bottom:$base-spacing;
+        margin-left:auto;
+    }
+
+    .img--right {
+        float:right;
+        margin-bottom:$base-spacing;
+        margin-left:$base-spacing;
+    }
+
+    .img--left {
+        float:left;
+        margin-right:$base-spacing;
+        margin-bottom:$base-spacing;
+    }
+}
+
+.blog-aside {
+    background-color:#FFF;
+    border-radius:5px;
+    border-width:1px;
+    border-style:solid;
+    border-color:#dadada;
+    padding:24px;
+}
+
+.blog-aside-search {
+    margin-bottom:24px;
+}
+
+.blog-aside-search__input {
+    border-radius:3px 0 0 3px;
+    height:37px;
+}
+
+.blog-aside-search__btn {
+    background-color:#8f8f8f;
+    border-radius:0 3px 3px 0;
+
+    &:hover {
+        background-color:#8f8f8f;
+    }
+}
+
+.blog-aside-links {
+    margin-bottom:24px;
+}
+
+.blog-aside-links__head {
+}
+
+.blog-aside-links__title {
+    font-family:$roboto;
+    font-weight:700;
+    margin-bottom:3px;
+}
+
+.blog-aside-links__body {
+    list-style:none;
+    line-height:1.3;
+    margin:0;
+
+    > li {
+        border-bottom:1px solid #f2f2f2;
+        padding:6px 0;
+
+        > a {
+            color:#9c9c9c;
+
+            &:hover {
+                color:darken(#9c9c9c, 10%);
+            }
+        }
+
+        &:first-child {
+            font-weight:700;
+        }
+    }
+}
+
+.blog-aside-links__item {
+}

@@ -1,0 +1,49 @@
+.mosaic {
+    img {
+        max-width: 100%;
+    }
+}
+
+.mosaic-title {
+    font-size: 24px;
+}
+
+.mosaic-title__instagram {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    text-decoration: underline;
+    text-transform: lowercase;
+}
+
+.mosaic__head {
+}
+
+.mosaic__body {
+}
+
+.mosaic-img {
+    display: block;
+    margin-bottom: 24px;
+
+    > img {
+        display: block;
+    }
+}
+
+.mosaic-thumb {
+    @include cf();
+
+    margin-left: -24px;
+}
+
+.mosaic-thumb__item {
+    float: left;
+    padding-left: 24px;
+    margin-bottom: 24px;
+    width: 50%;
+
+    > img {
+        display: block;
+    }
+}
