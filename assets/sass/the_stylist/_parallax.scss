@@ -1,0 +1,26 @@
+.parallax {
+    position: relative;
+    z-index: 3333;
+}
+
+.parallax__title {
+    background-color: #FFF;
+    border:12px solid;
+    display: none;
+    line-height:1;
+    padding:20px;
+    position: fixed;
+    top: 180px;
+    left: 25%;
+}
+
+.parallax__title--show {
+    @include media-query(desk) {
+        display: inline-block;
+    }
+}
+
+.parallax__title--right {
+    left: auto;
+    right: 25%;
+}

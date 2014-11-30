@@ -319,6 +319,18 @@
     </header>
     <!-- /.head -->
 
+    <!-- .wrapper -->
+    <div class="wrapper">
+        <!-- .parallax -->
+        <div class="parallax">
+            <h1 class="parallax__title beta" id="title-section-4">Pré Venda</h1>
+
+            <h1 class="parallax__title parallax__title--right beta" id="title-section-6">Compre Já</h1>
+        </div>
+        <!-- /.parallax -->
+    </div>
+    <!-- /.wrapper -->
+
     <ol class="curtains">
         <li id="section-1" class="curtain--bg" style="background-image:url(assets/img/head_top.png); background-size:cover;">
             <!-- .arrow -->
@@ -1417,27 +1429,35 @@
     <script src="assets/js/bower_components/responsiveslides/responsiveslides.js" type="text/javascript"></script>
     <script src="assets/js/main.js" type="text/javascript"></script>
     <script type="text/javascript">
-        var head = $('.head');
-
-        // portable
-        enquire.register("screen and (max-width: 1023px)", {
-            match : function() {
-                $('.curtains').unbind();
-                $('.curtains').curtain({
-                    scrollSpeed: 250,
-                    mobile: true
-                });
-            }
-        });
+        var head = $('.head'),
+            titleSection4 = $('#title-section-4'),
+            titleSection6 = $('#title-section-6');
 
         // desktop
         enquire.register("screen and (min-width: 1024px)", {
             match : function() {
-                $('.curtains').unbind();
                 $('.curtains').curtain({
                     scrollSpeed: 250,
                     nextSlide: function() {
                         var hash = location.hash.slice(1);
+                        var style = window.getComputedStyle($('#' + hash).get(0));
+                        var matrix = new WebKitCSSMatrix(style.webkitTransform);
+
+                        if (hash === "section-4") {
+                            $(window).scroll(function() {
+                                console.log(matrix.m41);
+                            });
+                            titleSection4.addClass('parallax__title--show');
+                        } else {
+                            titleSection4.removeClass('parallax__title--show');
+                        }
+
+                        if (hash === "section-6") {
+                            titleSection6.addClass('parallax__title--show');
+                        } else {
+                            titleSection6.removeClass('parallax__title--show');
+                        }
+
 
                         if (hash === "section-1" || hash === "section-3" || hash === "section-5" || hash === "section-7") {
                             head.removeClass('head--fixed');
@@ -1447,6 +1467,19 @@
                     },
                     prevSlide: function() {
                         var hash = location.hash.slice(1);
+
+                        if (hash === "section-4") {
+                            titleSection4.addClass('parallax__title--show');
+                        } else {
+                            titleSection4.removeClass('parallax__title--show');
+                        }
+
+                        if (hash === "section-6") {
+                            titleSection6.addClass('parallax__title--show');
+                        } else {
+                            titleSection6.removeClass('parallax__title--show');
+                        }
+
 
                         if (hash === "section-1" || hash === "section-3" || hash === "section-5" || hash === "section-7") {
                             head.removeClass('head--fixed');

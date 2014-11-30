@@ -114,16 +114,11 @@
     background-position: center center;
     display:block;
     height:100%;
-    margin-bottom:48px;
     text-align:center;
-    padding-top: 50%;
-
-    @include media-query(lap) {
-        padding-top: 20%;
-    }
+    padding: 48px 0;
 
     @include media-query(desk) {
-        padding-top: 0;
+        padding: 0;
     }
 }
 
@@ -267,7 +262,7 @@
     z-index:333;
 
     @include media-query(desk) {
-        position:absolute;
+        display: none;
     }
 }
 

@@ -3,7 +3,7 @@
     <ol class="curtains">
         <li id="section-1" class="curtain--bg" style="background-image:url(assets/img/banner/banner-4.jpg);">
             <!-- .head-stylist -->
-            <header class="head-stylist" data-fade="550" data-slow-scroll="3">
+            <div class="head-stylist" data-fade="550" data-slow-scroll="3">
                 <!-- .head-stylist__top -->
                 <div class="head-stylist__top">
                     <!-- .wrapper -->
@@ -34,12 +34,13 @@
                     <!-- /.wrapper -->
                 </div>
                 <!-- /.head-stylist__mid -->
-            </header>
+            </div>
             <!-- /.head-stylist -->
         </li>
-        <li id="section-2" class="curtain--main">
+
+        <li id="section-2">
             <!-- .main -->
-            <div class="main">
+            <div class="main main--stylist">
                 <!-- .wrapper -->
                 <div class="wrapper">
                     <!-- .stylist -->
@@ -629,8 +630,13 @@
     <script src="assets/js/bower_components/enquire/dist/enquire.min.js" type="text/javascript"></script>
     <script src="assets/js/bower_components/curtain.js/curtain.js" type="text/javascript"></script>
     <script type="text/javascript">
-        $('.curtains').curtain({
-            scrollSpeed: 250
+        // desktop
+        enquire.register("screen and (min-width: 1024px)", {
+            match : function() {
+                $('.curtains').curtain({
+                    scrollSpeed: 250
+                });
+            }
         });
     </script>
 </body>
